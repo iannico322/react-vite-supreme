@@ -22,9 +22,9 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <Router >
       <Routes >
-          <Route path="/REPO-NAME" element={<Navigate replace to="/REPO-NAME/main" />} />
+          <Route path="/react-vite-supreme" element={<Navigate replace to="/react-vite-supreme/main" />} />
           <Route
-          path="/REPO-NAME/main"
+          path="/react-vite-supreme/main"
           element={
             <>
               <Suspense fallback={<Loader />}>
