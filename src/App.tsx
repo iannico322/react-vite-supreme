@@ -20,7 +20,7 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <Router >
+    <Router  >
       <Routes >
           <Route path="/react-vite-supreme" element={<Navigate replace to="/react-vite-supreme/main" />} />
           <Route
