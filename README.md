@@ -2,6 +2,14 @@
 
 This template provides a minimal setup to get React working in Vite with more library on pack
 
+
+# Features
+- can be refresh in github Pages and not return 404 page not found
+- built in loader but you can change it here https://10015.io/tools/css-loader-generator
+- custom not found page
+- built in axios,tailwind, dark mode theme and many more kapoy explain kalimot nako
+
+
 ## Installation Steps Process
 
 1. clone this repo
@@ -15,5 +23,5 @@ This template provides a minimal setup to get React working in Vite with more li
 3. create a repo in github
 5. push everything on github
 6. In the vite.config.js file add this line before plugins: [react()],
-base: "/YOUR_REPOSITORY_NAME", App.tsx paths to "/YOUR_REPOSITORY_NAME", notFound Link to
+base: "/YOUR_REPOSITORY_NAME", main.tsx paths to "/YOUR_REPOSITORY_NAME", notFound Link to "/YOUR_REPOSITORY_NAME"
 7. In terminal type " npm run deploy"

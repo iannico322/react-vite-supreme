@@ -1,49 +1,44 @@
 import { ThemeProvider } from "@/components/theme-provider"
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import viteLogo from "/vite.svg";
 
+import { Link, Outlet } from "react-router-dom";
 
-import { Suspense, lazy } from "react";
-import Loader from "./components/loader/loader";
-import NotFound from "./screens/notFound";
-const  ItsyMain= lazy(() =>
-  wait(2300).then(() => import("./screens"))
-);
+import { ModeToggle } from "./components/mode-toggle";
 
 function App() {
 
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <Router  >
-      <Routes >
-          <Route path="/react-vite-supreme" element={<Navigate replace to="/react-vite-supreme/main" />} />
-          <Route
-          path="/react-vite-supreme/main"
-          element={
-            <>
-              <Suspense fallback={<Loader />}>
-                <ItsyMain />
-              </Suspense>
-            </>
-          }
-          />
-          <Route path="*" element={<NotFound/>} />
-      </Routes>
-    </Router>
+     <div className=" bg-background h-screen w-screen overflow-hidden">
+      <div className=" flex justify-around items-center w-full py-5 border-b-[1px] border-accent ">
+        <Link to="/react-vite-supreme" >
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </Link>
+        <nav className=" text-accent-foreground">
+        <Link to="/react-vite-supreme/page1">Page1</Link>
+        {" | "}
+        <Link to="/react-vite-supreme/page2">Page2</Link>
+        {" | "}
+        <Link to="/react-vite-supreme/contact">Notfound</Link>
+        </nav>
+        <ModeToggle/>
+      </div>
+ 
+
+      
+
+      <Outlet />
+      <div className=" h-full w-screen bg-background flex items-center justify-center">
+        <h1 className=" text-accent-foreground text-4xl "> This is Blank page on main directory</h1>
+  
+    </div>
+    </div>
     </ThemeProvider>
   )
 }
 
-function wait( time:number) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, time);
-  });
-}
+
 
 export default App
