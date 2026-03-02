@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/components/theme-provider"
 
 import viteLogo from "/vite.svg";
 
@@ -13,8 +12,7 @@ function App() {
 
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-     <div className=" bg-background min-h-screen w-full overflow-hidden flex flex-col  items-center">
+    <div className=" bg-background min-h-screen w-full overflow-hidden flex flex-col  items-center">
       
       <nav className=" animate__animated animate__slideInDown  z-20 bg-background fixed flex justify-between items-center w-full max-w-[1468px] py-5 border-b-[0px] border-accent \ ">
         <Link className=" ml-5" to="/react-vite-supreme" >
@@ -56,7 +54,6 @@ function App() {
       <Outlet />
      
     </div>
-    </ThemeProvider>
   )
 }
 
